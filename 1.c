@@ -2,10 +2,21 @@
 
 int main(void)
 {
-    float g,t,h;
-    g=10;
-    t=3;
-    h=1/2.0*g*t*t;
-    printf("h is %f \n",h);
+    int a,b,c,max=0;
+    printf("a=");
+    scanf("%d",&a);
+    printf("b=");
+    scanf("%d",&b);
+    printf("c=");
+    scanf("%d",&c);
+    if(a>b)
+        if(a>c) max=a;
+        else max=c;
+    else
+        if(b>c) max=b;
+        else max=c;
+    printf("max=%d",max);
+        
+    
     return 0;
 }
