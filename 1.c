@@ -2,16 +2,23 @@
 
 int main(void)
 {
-    int x,digit,ret=0;
-    printf("x=");
-    scanf("%d",&x);
-    while(x>0){
-        digit=x%10;
-        ret=ret*10+digit;
-        printf("x=%d,digit=%d,ret=%d\n",x,digit,ret);
-        x/=10;
+    int x,y,z,t;
+    scanf("%d%d%d",&x,&y,&z);
+    if(x>y)
+    {
+        t=x;x=y;y=t;    
     }
-    printf("%d",ret);
+    if(x>z)
+    {
+        t=x;x=z;z=t;
+
+    }
+    if(y>z)
+    {
+        t=y;y=z;z=t;
+    }
+    printf("%d<%d<%d",x,y,z);
+
     return 0;
 }
 
