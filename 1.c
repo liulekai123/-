@@ -2,21 +2,16 @@
 
 int main(void)
 {
-    int a,b,c,max=0;
-    printf("a=");
-    scanf("%d",&a);
-    printf("b=");
-    scanf("%d",&b);
-    printf("c=");
-    scanf("%d",&c);
-    if(a>b)
-        if(a>c) max=a;
-        else max=c;
-    else
-        if(b>c) max=b;
-        else max=c;
-    printf("max=%d",max);
-        
-    
+    int x,digit,ret=0;
+    printf("x=");
+    scanf("%d",&x);
+    while(x>0){
+        digit=x%10;
+        ret=ret*10+digit;
+        printf("x=%d,digit=%d,ret=%d\n",x,digit,ret);
+        x/=10;
+    }
+    printf("%d",ret);
     return 0;
 }
+
