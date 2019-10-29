@@ -28,13 +28,13 @@ int main(void)
     }
     if (count == 0)
         printf("game over");
-    if (count == 1)
+    else if (count == 1)
         printf("bingo");
-    if (count == 2 || count == 3)
+    else if (count == 2 || count == 3)
         printf("lucky you");
-    if (count > 3 && count < n)
+    else if (count > 3 && count < n)
         printf("good gues");
-    if (count > n)
+    else if (count > n)
         printf("game over");
     return 0;
 }
