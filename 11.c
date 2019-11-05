@@ -1,7 +1,8 @@
 #include<stdio.h>
 int main(void)
 {
-    double s,t,sum1,sum2,sum;
+    double s,t,sum1,sum2;
+    int sum;
     printf("s=");
     scanf("%lf",&s);
     printf("t=");
@@ -12,6 +13,7 @@ int main(void)
     else sum1=10+7*2+(s-10)*3;
     sum2=t/5*2;
     sum=sum1+sum2;
-    printf("sum=%.0lf",sum);
+    sum=(int)(sum+0.5);
+    printf("sum=%d",sum);
     return 0;
 }
