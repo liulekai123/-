@@ -1,22 +1,31 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include<math.h>
+double funcos(double e,double x);
 int main(void)
 {
-    int min=1,sum=0,n,i,j,a,b;
-    printf("n=");
-    scanf("%d",&n);
-    for(i=1;i<n;i++) min=min*10;
-    for(j=min;j<min*10;j++)
-    {
-        b=j;
-        while(min>0)
-        {
-            a=j/min;
-            sum=sum+pow(a,n);
-            j=j%min;
-            min=min/10;
-        }
-        if(sum==b) printf("%d",b);
-    }
+    double e,x,cosx;
+    printf("e=");
+    scanf("%lf",&e);
+    printf("x=");
+    scanf("%lf",&x);
+    printf("cosx=%lf",funcos(e,x));
     return 0;
+}
+double funcos(double e,double x)
+{
+    double item=1,sum=0,fenmu=1;
+    int flag=1;
+    for(int i=0;fabs(item)>=e;i=i+2)
+    {
+        fenmu=1;
+        for(int j=1;j<=i;j++)fenmu=fenmu*j;
+        printf("fenmu=%d ",fenmu);
+        item=pow(x,i)/fenmu;
+        printf("item=%lf ",item);
+        sum=sum+flag*item;
+        printf("sum=%lf\n",sum);
+        flag=-flag;
+    }
+    return sum;
 }
