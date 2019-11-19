@@ -10,7 +10,7 @@ int main(void)
     printf("|x|=%d\n",abs(x));
     double y;
     printf("y=");
-    scanf("%d",&y);
+    scanf("%lf",&y);
     printf("|y|=%d",fabs(y));
     return 0;
 }

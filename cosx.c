@@ -20,9 +20,7 @@ double funcos(double e,double x)
     {
         fenmu=1;
         for(int j=1;j<=i;j++)fenmu=fenmu*j;
-        printf("fenmu=%d ",fenmu);
         item=pow(x,i)/fenmu;
-        printf("item=%lf ",item);
         sum=sum+flag*item;
         printf("sum=%lf\n",sum);
         flag=-flag;

@@ -24,7 +24,7 @@ int sum(int m,int n)
     int k;
     for(k=n;k<=m*n;k++)
     {
-        if(k%m==0&&k%n==0) break;
+        if(k%m==0 && k%n==0) break;
     }
     return k;
 }
@@ -33,7 +33,7 @@ int gkd(int m,int n)
     int w;
     for(w=m;w>=1;w--)
     {
-        if(m%w==0&&n%w==0) break;
+        if(m%w==0 && n%w==0) break;
     }
     return w;
 }
