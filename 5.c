@@ -1,18 +1,15 @@
 #include<stdio.h>
+#include<math.h>
 int main(void)
 {
-    int n,i;
-    double sum=2/1,item,fengmu=1,fengzi=2;
-    printf("n=");
-    scanf("%d",&n);
-    for(i=1;i<=n-1;i++)
+    double item=1,i,sum=0,fenmu=1,a=1.0;
+    while(fabs(item)>=0.0001)
     {
-        fengzi=fengmu+fengzi;
-        fengmu=fengzi-fengmu;
-        item=fengzi/fengmu;
-        sum+=item;
+        item=a/fenmu;
+        sum=sum+item;
+        fenmu=fenmu+2;
+        a=-a;
     }
-    printf("sum=%.2lf",sum);
+    printf("%lf",4*sum);
     return 0;
-
 }
