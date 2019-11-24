@@ -10,5 +10,5 @@ int main(void)
             if(5*male+3*female+small/3==100) printf("male=%d,female=%d,small=%d\n",male,female,small);
         }
     }
-    return 0;
+    return 0; 
 }

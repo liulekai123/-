@@ -7,7 +7,8 @@ class Maze
 private:
 	int x, y, xout, yout;
 	char ch;
-	char a[100][100] = { "**********",
+	char a[100][100] = 
+	{   "**********",
 		"*O       *",
 		"**  ******",
 		"***      *",
