@@ -5,7 +5,7 @@ int count=0;
 int main(void)
 {
     int m,n,sum=0;
-    printf("杈撳叆涓や釜鏁存暟:");
+    printf("输入两个数");
     scanf("%d%d",&m,&n);
     if(m>n)
     {

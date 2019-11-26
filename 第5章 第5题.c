@@ -3,7 +3,7 @@ int countdigit(int number,int digit);
 int main(void)
 {
     int number;
-    printf("è¾“å…¥ä¸€ä¸ªæ•´æ•°:");
+    printf("ÊäÈëÒ»¸öÕûÊı:");
     scanf("%d",&number);
     printf("%d",countdigit(number,2));
     return 0;
