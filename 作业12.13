@@ -1,0 +1,25 @@
+#include <stdio.h>
+int findmin(int a[],int n);
+#define N 10
+int main(void)
+{
+    int a[N], i, min;
+    for (i = 0; i < N; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    min=findmin(a,N);
+    printf("%d", a[min]);
+    return 0;
+}
+int findmin (int a[],int n)
+{
+    int min,i;
+    min = 0;
+    for (i = 1; i < n; i++)
+    {
+        if (a[i]< a[min])
+            min = i;
+    }
+    return min;
+}
