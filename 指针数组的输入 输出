@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+ 
+#define N 3
+#define MAX_STR_LEN     32
+ 
+int main(void)
+{
+    //输入N个字符串
+    char *str[N];
+    int i;
+    for(i=0;i<N;i++)
+    {
+        str[i] = (char *)malloc(sizeof(char) * MAX_STR_LEN);
+        printf("输入第%d个字符串\n",i+1);
+        fgets(str[i], MAX_STR_LEN, stdin);
+    }
+    for(i = 0; i < N; i++)
+    {
+        printf("\n第%d个字符串:",i+1);
+        puts(str[i]);
+        free(str[i]);
+    }
+}
